@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome, Seeker</title>
+<style>
+  body { background: black; color: lime; font-family: monospace; }
+  .hidden { display: none; }
+  a { color: cyan; text-decoration: none; }
+  pre { font-size: 16px; }
+</style>
+</head>
+<body>
+<pre>
+Welcome to the maze of symbols ⚯
+
+Error 404? Or is it 9887?
+Keep looking, the cross may guide you.
+
+<!-- hidden message: cGJ2Lzk4ODd2 -->
+
+<input type="text" id="code" placeholder="Enter code">
+<button onclick="checkCode()">Submit</button>
+
+<div id="secret" class="hidden">
+  Congratulations! Seek the file: secret_level2.txt
+</div>
+</pre>
+
+<script>
+function checkCode() {
+  let val = document.getElementById('code').value;
+  if(val === 'mys/9887s') {
+    document.getElementById('secret').classList.remove('hidden');
+  } else {
+    alert('Wrong code, seeker!');
+  }
+}
+</script>
+</body>
+</html>
